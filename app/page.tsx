@@ -94,12 +94,14 @@ const MainText = styled.div`
   text-align: center;
   h1 {
     letter-spacing: 35px;
+    text-indent: 35px;
     margin-bottom: 20px;
     font-size: 52px;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
   }
   h2 {
     letter-spacing: 26px;
+    text-indent: 26px;
     margin-bottom: 30px;
     font-size: 40px;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
@@ -107,7 +109,42 @@ const MainText = styled.div`
   p {
     font-size: 24px;
     letter-spacing: 9px;
+    text-indent: 9px;
     text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 26px;
+      letter-spacing: 23px;
+      text-indent: 23px;
+    }
+    h2 {
+      font-size: 20px;
+      letter-spacing: 13px;
+      text-indent: 13px;
+    }
+    p {
+      font-size: 12px;
+      letter-spacing: 5px;
+      text-indent: 5px;
+    }
+  }
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 20px;
+      letter-spacing: 16px;
+      text-indent: 16px;
+    }
+    h2 {
+      font-size: 15px;
+      letter-spacing: 9px;
+      text-indent: 9px;
+    }
+    p {
+      font-size: 8px;
+      letter-spacing: 4px;
+      text-indent: 4px;
+    }
   }
 `;
 const MovingText = styled.div`

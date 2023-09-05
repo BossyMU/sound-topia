@@ -24,9 +24,13 @@ export default function Home() {
         </div>
       </MovingText>
       <MainText>
-        <h1>SOUNDTOPIA</h1>
-        <h2>FESTIVAL 2024</h2>
-        <p>MORE INFORMATION SOON</p>
+        <div className="lineUp">
+          <h1>SOUNDTOPIA</h1>
+          <h2>FESTIVAL 2024</h2>
+        </div>
+        <div className="lineUp-delay">
+          <p>MORE INFORMATION SOON</p>
+        </div>
       </MainText>
       <MovingText>
         <div className="text">
@@ -60,6 +64,30 @@ const StyledDiv = styled.div`
   justify-content: space-between;
   font-family: "InriaSans-Light";
   padding: 3rem 0;
+
+  .lineUp {
+    animation: 2s anim-lineUp ease-out;
+  }
+  .lineUp-delay {
+    animation: 5s anim-lineUp ease-out;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
 `;
 
 const MainText = styled.div`
